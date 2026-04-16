@@ -1,8 +1,6 @@
 
 """
-CS 131B Project 8
-
-Programmer: Kaweny Ezidio
+Author: Kaweny Ezidio
 
 Date: 10/30/2022
 
