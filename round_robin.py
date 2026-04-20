@@ -53,47 +53,24 @@ def generate_round_robin_schedule(name_list):
 
 #create the main function 
 def main():
-#store pairs returned in a variable called all pairs
-    all_pairs = generate_round_robin_schedule(["A","B","C","D","E"])
-    #print all pairs
+
+    # ask user for input (comma-separated values)
+    user_input = input("Enter the names separated by commas (e.g. A,B,C,D,E): ")
+
+    # convert input string into a list
+    items = [item.strip() for item in user_input.split(",")]
+
+    # generate pairs
+    all_pairs = generate_round_robin_schedule(items)
+
+    # print result
     print(all_pairs)
     
 #call the main function
 main()   
+    
 
-"""
-SAMPLE RUN 1:
 
-[('A', 'H'), ('B', 'G'), ('C', 'F'), ('D', 'E'), ('A', 'G'), ('H', 'F'),
- ('B', 'E'), ('C', 'D'), ('A', 'F'), ('G', 'E'), ('H', 'D'), ('B', 'C'),
- ('A', 'E'), ('F', 'D'), ('G', 'C'), ('H', 'B'), ('A', 'D'), ('E', 'C'),
- ('F', 'B'), ('G', 'H'), ('A', 'C'), ('D', 'B'), ('E', 'H'), ('F', 'G'),
- ('A', 'B'), ('C', 'H'), ('D', 'G'), ('E', 'F')]
-
-SAMPLE RUN 2:
-
-[('A', 'bye'), ('B', 'G'), ('C', 'F'), ('D', 'E'), ('A', 'G'), ('bye', 'F'),
-('B', 'E'), ('C', 'D'), ('A', 'F'), ('G', 'E'), ('bye', 'D'), ('B', 'C'),
-('A', 'E'), ('F', 'D'), ('G', 'C'), ('bye', 'B'), ('A', 'D'), ('E', 'C'),
-('F', 'B'), ('G', 'bye'), ('A', 'C'), ('D', 'B'), ('E', 'bye'), ('F', 'G'),
-('A', 'B'), ('C', 'bye'), ('D', 'G'), ('E', 'F')]
-
-SAMPLE RUN 3:
-
-[('A', 'F'), ('B', 'E'), ('C', 'D'), ('A', 'E'), ('F', 'D'), ('B', 'C'),
-('A', 'D'), ('E', 'C'), ('F', 'B'), ('A', 'C'), ('D', 'B'), ('E', 'F'),
-('A', 'B'), ('C', 'F'), ('D', 'E')]
-
-SAMPLE RUN 4:
-
-[('A', 'bye'), ('B', 'E'), ('C', 'D'), ('A', 'E'), ('bye', 'D'), ('B', 'C'),
-('A', 'D'), ('E', 'C'), ('bye', 'B'), ('A', 'C'), ('D', 'B'), ('E', 'bye'),
-('A', 'B'), ('C', 'bye'), ('D', 'E')][('A', 'bye'), ('B', 'E'), ('C', 'D'),
-('A', 'E'), ('bye', 'D'), ('B', 'C'), ('A', 'D'), ('E', 'C'), ('bye', 'B'),
-('A', 'C'), ('D', 'B'), ('E', 'bye'), ('A', 'B'), ('C', 'bye'), ('D', 'E')]
-
-"""
- 
 
 
 
